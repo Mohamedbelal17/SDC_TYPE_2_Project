@@ -1,104 +1,93 @@
-📊 SSIS Data Warehouse – SCD Type 2 (Kimball Methodology)
-📌 Overview
+# SSIS Data Warehouse – SCD Type 2 (Kimball Methodology)
 
-This project implements a Data Warehouse using Microsoft SSIS following the Kimball dimensional modeling approach.
-It focuses on Slowly Changing Dimension (SCD) Type 2 to track historical changes while preserving data accuracy in the fact table.
+## Overview
+This project is a **SQL Server Integration Services (SSIS)** data warehouse implementation using the **Kimball dimensional modeling methodology**.  
+It demonstrates the use of **Slowly Changing Dimension (SCD) Type 2** to track historical changes in dimension data.
 
-The solution uses staging tables, lookups, and conditional logic to manage dimension history and load conformed facts.
+The solution follows a structured ETL approach using **staging tables**, **lookups**, and **conditional splits** before loading data into dimension and fact tables.
 
-🏗️ Architecture (Kimball Approach)
+---
 
-Staging Layer – Raw data preparation and change detection
+## Architecture
+The ETL design follows the Kimball approach:
 
-Dimension Layer – SCD Type 2 dimensions with surrogate keys
+- **Staging Layer** – prepares source data and detects changes  
+- **Dimension Layer** – SCD Type 2 dimensions with surrogate keys  
+- **Fact Layer** – transactional fact table linked to dimensions  
 
-Fact Layer – Transactional facts linked to dimensions
+**Kimball principles applied:**
+- Star schema
+- Surrogate keys
+- Conformed dimensions
+- Historical tracking (SCD Type 2)
 
-Key Kimball principles applied:
+---
 
-Star schema design
+## Dimensions
 
-Surrogate keys
+### Product Dimension (SCD Type 2)
+Handles product attribute changes over time.
 
-Historical tracking with SCD Type 2
+**Process:**
+- Load source data into staging
+- Lookup existing product records
+- Use Conditional Split to detect changes
+- Expire old records using end date
+- Insert new records with new surrogate keys
 
-Conformed dimensions
+![Product SCD Flow](images/70f3cb37-4d77-4c57-bff9-156c0d2c4e97.png)
 
-🧱 Dimensions
-📦 Product Dimension (SCD Type 2)
+---
 
-Tracks product attribute changes over time.
+### Customer Dimension (SCD Type 2)
+Tracks historical changes in customer data.
 
-Lookup existing records
+**Process:**
+- Stage customer data
+- Lookup current customer records
+- Update end date for changed rows
+- Insert new customer versions
 
-Conditional Split (new vs changed)
+![Customer SCD Flow](images/1cf2b799-56f7-469c-94da-473ad105ca13.png)
 
-Expire old rows (end date)
+---
 
-Insert new version with new surrogate key
+### Date Dimension
+Standard Kimball date dimension generated from a date source.
 
-👤 Customer Dimension (SCD Type 2)
+Includes day, month, year, and other date-related attributes.
 
-Manages customer history such as address or profile changes.
+![Date Dimension Flow](images/26615c57-2c78-4056-9cc2-87910cd47149.png)
 
-Staging-based change detection
+---
 
-Start/End date handling
+## Fact Table
+The fact table is loaded after resolving **surrogate keys** from all dimensions.
 
-Current row flag
+**Process:**
+- Load transactional source data
+- Lookup Product, Customer, and Date dimensions
+- Insert records into the fact table using surrogate keys
 
-📅 Date Dimension
+This ensures proper relationships within the star schema.
 
-Standard Kimball date dimension populated from a generated date source.
+---
 
-📈 Fact Table Load
+## Technologies Used
+- SQL Server  
+- SQL Server Integration Services (SSIS)  
+- T-SQL  
+- Kimball Methodology  
+- Slowly Changing Dimension (SCD) Type 2  
 
-Fact data is loaded after resolving surrogate keys via dimension lookups.
+---
 
-Product lookup
+## Package Execution Order
+1. Date Dimension  
+2. Product Dimension  
+3. Customer Dimension  
+4. Fact Table Load  
 
-Customer lookup
+---
 
-Date lookup
-
-Clean insert into fact table
-
-This ensures referential integrity in the star schema.
-
-🛠️ Technologies
-
-SQL Server
-
-SSIS
-
-T-SQL
-
-Kimball Methodology
-
-SCD Type 2
-
-🚀 Execution Order
-
-Date Dimension
-
-Product Dimension
-
-Customer Dimension
-
-Fact Load
-
-📂 Repository Structure
-├── SSIS_Packages/
-├── SQL_Scripts/
-├── images/
-└── README.md
-
-✅ Highlights
-
-Kimball-style dimensional modeling
-
-Full SCD Type 2 history tracking
-
-Production-ready SSIS design
-
-Clear separation of staging, dimensions, and facts
+## Repository Structure
