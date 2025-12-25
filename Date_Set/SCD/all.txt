@@ -1,0 +1,6 @@
+Full_name,Age,Gender,Address,City,Contact_number,Account_type,Email,Account_balance,Loan_type,Interest_rate,Loan_term,Loan_status,Loan_amount,Loan_date
+Mohamed Belal,28,Male,12 Tahrir St,Cairo,01012345678,Savings,mohamed.belal@email.com,5000,Personal Loan,12,24 months,Approved,20000,2025-01-15
+Aya Hassan,34,Female,45 Nile Corniche,Alexandria,01234567890,Checking,aya.hassan@email.com,12000,Home Loan,8,120 months,Pending,150000,2025-03-20
+Omar Adel,42,Male,7 Al-Azhar Ave,Giza,01198765432,Savings,omar.adel@email.com,8000,Car Loan,10,36 months,Approved,30000,2025-02-10
+Sara Khaled,25,Female,22 Heliopolis St,Cairo,01087654321,Current,sara.khaled@email.com,3000,Education Loan,5,48 months,Rejected,10000,2025-04-01
+Ahmed Mahmoud,38,Male,88 Corniche El-Nil,Alexandria,01211223344,Checking,ahmed.mahmoud@email.com,15000,Personal Loan,12,24 months,Approved,25000,2025-05-12
