@@ -88,6 +88,4 @@ This ensures proper relationships within the star schema.
 3. Customer Dimension  
 4. Fact Table Load  
 
----
-
-## Repository Structure
+> Created by **Mohamed Belal** — Data Engineer
