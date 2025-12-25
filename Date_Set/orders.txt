@@ -1,0 +1,5 @@
+order_id,customer_id,order_date,status,total_amount
+5001,1001,2024-02-01,Completed,23250
+5002,1002,2024-02-01,Completed,250
+5003,1003,2024-02-02,Pending,1500
+5004,1001,2024-02-03,Completed,120
