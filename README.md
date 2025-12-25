@@ -35,7 +35,7 @@ Handles product attribute changes over time.
 - Expire old records using end date
 - Insert new records with new surrogate keys
 
-![Product SCD Flow](images/70f3cb37-4d77-4c57-bff9-156c0d2c4e97.png)
+![Product SCD Flow]([images/70f3cb37-4d77-4c57-bff9-156c0d2c4e97.png](https://github.com/Mohamedbelal17/SDC_TYPE_2_Project/blob/main/blogs/Capture11.PNG))
 
 ---
 
@@ -48,7 +48,7 @@ Tracks historical changes in customer data.
 - Update end date for changed rows
 - Insert new customer versions
 
-![Customer SCD Flow](images/1cf2b799-56f7-469c-94da-473ad105ca13.png)
+![Customer SCD Flow]([images/1cf2b799-56f7-469c-94da-473ad105ca13.png](https://github.com/Mohamedbelal17/SDC_TYPE_2_Project/blob/main/blogs/Capture22.PNG))
 
 ---
 
