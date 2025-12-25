@@ -48,7 +48,7 @@ Tracks historical changes in customer data.
 - Update end date for changed rows
 - Insert new customer versions
 
-![Customer SCD Flow](https://github.com/Mohamedbelal17/SDC_TYPE_2_Project/blob/main/blogs/Capture22.PNG)
+![Customer SCD Flow](https://github.com/Mohamedbelal17/SDC_TYPE_2_Project/blob/main/blogs/Capture33.PNG)
 
 ---
 
@@ -57,7 +57,7 @@ Standard Kimball date dimension generated from a date source.
 
 Includes day, month, year, and other date-related attributes.
 
-![Date Dimension Flow](images/26615c57-2c78-4056-9cc2-87910cd47149.png)
+![Date Dimension Flow](https://github.com/Mohamedbelal17/SDC_TYPE_2_Project/blob/main/blogs/Capture22.PNG)
 
 ---
 
