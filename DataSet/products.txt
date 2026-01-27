@@ -1,0 +1,5 @@
+product_id,product_name,category,unit_price,updated_at
+2001,Laptop X15,Electronics,23000,2024-01-10
+2002,Wireless Mouse,Electronics,250,2024-01-12
+2003,Office Chair,Furniture,1500,2024-01-15
+2004,Water Bottle,Sports,120,2024-01-14

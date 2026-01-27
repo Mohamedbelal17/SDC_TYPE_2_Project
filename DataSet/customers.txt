@@ -1,0 +1,5 @@
+customer_id,first_name,last_name,email,phone,address,city,country,loyalty_tier,updated_at
+1001,Ahmed,Hassan,ahmed.hassan@example.com,01012345678,12 Street A,Cairo,Egypt,Silver,2024-01-10
+1002,Sara,Ali,sara.ali@example.com,01098765432,55 Nile Road,Giza,Egypt,Gold,2024-01-15
+1003,John,Smith,john.smith@example.com,01533322211,22 Garden St,Alexandria,Egypt,Bronze,2024-01-20
+1004,Mona,Ibrahim,mona.ibrahim@example.com,01177744455,77 Corniche,Alexandria,Egypt,Silver,2024-01-18
